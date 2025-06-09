@@ -2304,6 +2304,7 @@ div.summary {
 
 p {
 	color:#320233;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 .service {
@@ -2342,3 +2343,6 @@ img.d-block.w-100 {
 	  border-radius: 16px;
 }
 
+#text {
+	font-family: 'Times New Roman', Times, serif;
+}
