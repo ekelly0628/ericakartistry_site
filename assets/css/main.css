@@ -2283,20 +2283,18 @@ div.summary {
 }
 
 
-.Services {
-
-	font-family: 'Inter', sans-serif;
-	font-size: 24px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #510245; /* Light background color */
-	margin: 0;
-	padding: 16px; /* Add some padding for smaller screens */
-	box-sizing: border-box; /* Include padding in element's total width and height */
-	border-radius: 8px;
+.service {
+	
+	color: #580259;
 	text-decoration: none;
+
 }
+
+a {
+      text-decoration: none;
+    }
+
+
 
 .Services:hover {
 	background-color: #9a0484;
@@ -2312,7 +2310,7 @@ p {
 	border-radius: 16px;
 	margin: 16px;
 	background-color: rgb(236, 104, 236);
-
+	text-decoration: none;
 }
 
 .service:hover {
@@ -2325,7 +2323,7 @@ p {
 	cursor: pointer;
 }
 
-a {
+.service h3, .service p, .service ul, .service li {
 	text-decoration: none;
 }
 
