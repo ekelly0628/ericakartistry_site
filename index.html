@@ -213,6 +213,7 @@
                                             <option value="On-Set/ On-Location Glam">On-Set/ On-Location Glam</option>
                                             <option value="Half Day Rate (4-5 hours)">Half Day Rate (4-5 hours)</option>
                                             <option value="Full Day Rate (8-12 hours)">Full Day Rate (8-12 hours)</option>
+                                            <option value="One-on-One Private Beauty Lesson - Soft Glam">One-on-One Private Beauty Lesson - Soft Glam</option>
                                         </select>
                                     </div>                                  
                                     <div class="col-12">
@@ -222,53 +223,108 @@
                         <article id="MyServices" class="panel">
                                 <h2>Services</h2>
                                 <br>
-                               
-                                <a href="#bookMe"><div class="service">
-                                    <h3>Home-Based Glam</h3>
-                                    <p><strong>Rate: $125</strong><br>Soft, polished glam done in home studio perfect for special occasions, speaking engagements, or headshots/small shoots<br>Includes:</p>                               
-                                    <ul>
-                                        <li>Skin prep + flawless glam</li>
-                                        <li>lashes</li>
-                                        <li>Mini touch-up kit</li>
-                                    </ul>
-                                </div></a>
-                                <a href="#bookMe"><div class="service">
-                                    <h3>On-Set / On-Location Glam</h3>
-                                    <p><strong>Rate: $150</strong><br>Ideal for on-location shoots, travel bookings, and client site visits<br>Includes:</p>                                
-                                    <ul>
-                                        <li>Skin prep + Full soft or statement glam</li>
-                                        <li>Lashes</li>
-                                        <li>Light on-site touch-up</li>
-                                        <li>touch up kit</li>
-                                    </ul>
-                                </div></a>
-                                <a href="#bookMe"><div class="service">
-                                    <h3>Half Day Rate (4-5 hours)</h3>
-                                    <p><strong>Flat Rate: $650</strong><br>For creative projects, shows, or group sessions<br>Includes:</p>                             
-                                    <ul>
-                                        <li>Up to 5 makeup looks</li>
-                                        <li>Light touch-ups</li>
-                                        <li>On-site presence throughout the half-day</li>
-                                        <li>Ideal for small editorial sets, teams, or show prep</li>
-                                    </ul>
-                                </div></a>
-                                <a href="#bookMe"><div class="service">
-                                    <h3>Full Day Rate (8-12 hours)</h3>
-                                    <p><strong>Flat Rate: $1000</strong><br>For fashion shows, campaign shoots, and full production days<br>Includes:</p>                               
-                                    <ul>
-                                        <li>Up to 10 makeup looks</li>
-                                        <li>On-set maintenance + touch-ups</li>
-                                        <li>Pre-shoot consultation if needed</li>
-                                        <li>Time block includes prep, transitions, and final detail work</li>
-                                    </ul>
-                                </div></a>
-                                <div>
-                                    <h3><strong>Please Note:</strong></h3>
-                                    
-                                    <p>I'm happy to discuss custom pricing based on project scope, travel, team size, and budget. Let's work to bring your vision to life!<br><br>All bookings require a deposit to confirm your service. The amount of deposit requested varies based on the service requested. Subject to change.<br><br>Tips are not required but greatly appreciated and valued!</p>
-                                    
-                                    <h3><strong>Travel Policy</strong></h3>
-                                    <p>All on-set bookings located outside a 20-mile radius from Washington, D.C. will incur a base travel fee of $45, which may be adjusted depending on the final location and accessibility. Final pricing will be confirmed during booking.</p>
+                                <p class="service-intro">Please select the booking experience that best fits what you need.</p>
+                                <div class="service-choice-grid" aria-label="Choose a service type">
+                                    <button type="button" class="service-choice" data-service-panel="makeup-session-services">
+                                        <span>Book a Makeup Session</span>
+                                    </button>
+                                    <button type="button" class="service-choice" data-service-panel="private-beauty-lesson">
+                                        <span>Book a One-on-One Private Beauty Lesson</span>
+                                    </button>
+                                </div>
+
+                                <div id="makeup-session-services" class="service-panel" hidden>
+                                    <h3>Makeup Session Services</h3>
+                                    <a href="#bookMe" data-booking-service="Home-Based Glam"><div class="service">
+                                        <h3>Home-Based Glam</h3>
+                                        <p><strong>Rate: $125</strong><br>Soft, polished glam done in home studio perfect for special occasions, speaking engagements, or headshots/small shoots<br>Includes:</p>                               
+                                        <ul>
+                                            <li>Skin prep + flawless glam</li>
+                                            <li>lashes</li>
+                                            <li>Mini touch-up kit</li>
+                                        </ul>
+                                    </div></a>
+                                    <a href="#bookMe" data-booking-service="On-Set/ On-Location Glam"><div class="service">
+                                        <h3>On-Set / On-Location Glam</h3>
+                                        <p><strong>Rate: $150</strong><br>Ideal for on-location shoots, travel bookings, and client site visits<br>Includes:</p>                                
+                                        <ul>
+                                            <li>Skin prep + Full soft or statement glam</li>
+                                            <li>Lashes</li>
+                                            <li>Light on-site touch-up</li>
+                                            <li>touch up kit</li>
+                                        </ul>
+                                    </div></a>
+                                    <a href="#bookMe" data-booking-service="Half Day Rate (4-5 hours)"><div class="service">
+                                        <h3>Half Day Rate (4-5 hours)</h3>
+                                        <p><strong>Flat Rate: $650</strong><br>For creative projects, shows, or group sessions<br>Includes:</p>                             
+                                        <ul>
+                                            <li>Up to 5 makeup looks</li>
+                                            <li>Light touch-ups</li>
+                                            <li>On-site presence throughout the half-day</li>
+                                            <li>Ideal for small editorial sets, teams, or show prep</li>
+                                        </ul>
+                                    </div></a>
+                                    <a href="#bookMe" data-booking-service="Full Day Rate (8-12 hours)"><div class="service">
+                                        <h3>Full Day Rate (8-12 hours)</h3>
+                                        <p><strong>Flat Rate: $1000</strong><br>For fashion shows, campaign shoots, and full production days<br>Includes:</p>                               
+                                        <ul>
+                                            <li>Up to 10 makeup looks</li>
+                                            <li>On-set maintenance + touch-ups</li>
+                                            <li>Pre-shoot consultation if needed</li>
+                                            <li>Time block includes prep, transitions, and final detail work</li>
+                                        </ul>
+                                    </div></a>
+                                    <div>
+                                        <h3><strong>Please Note:</strong></h3>
+                                        
+                                        <p>I'm happy to discuss custom pricing based on project scope, travel, team size, and budget. Let's work to bring your vision to life!<br><br>All bookings require a deposit to confirm your service. The amount of deposit requested varies based on the service requested. Subject to change.<br><br>Tips are not required but greatly appreciated and valued!</p>
+                                        
+                                        <h3><strong>Travel Policy</strong></h3>
+                                        <p>All on-set bookings located outside a 20-mile radius from Washington, D.C. will incur a base travel fee of $45, which may be adjusted depending on the final location and accessibility. Final pricing will be confirmed during booking.</p>
+                                    </div>
+                                </div>
+
+                                <div id="private-beauty-lesson" class="service-panel" hidden>
+                                    <div class="service service-detail">
+                                        <h3>One-on-One Private Beauty Lesson - Soft Glam</h3>
+                                        <p>A personalized one-on-one makeup lesson designed to help you master a flawless soft glam look with confidence.</p>
+                                        <p>During this private hands-on session, you'll learn my step-by-step soft glam techniques including skin prep, complexion application, contour and highlight placement, blending, brow shaping, lash application, and the finishing details that bring the entire look together.</p>
+                                        <p>This lesson is customized to your individual features, skill level, and beauty goals to ensure you leave feeling more confident in your makeup application and understanding of what works best for your face.</p>
+
+                                        <h3>Perfect for:</h3>
+                                        <ul>
+                                            <li>Beginners</li>
+                                            <li>Models &amp; content creators</li>
+                                            <li>Aspiring makeup artists</li>
+                                            <li>Anyone wanting to improve their personal makeup skills</li>
+                                        </ul>
+
+                                        <h3>What's Included:</h3>
+                                        <ul>
+                                            <li>Personalized hands-on instruction</li>
+                                            <li>Step-by-step soft glam application</li>
+                                            <li>Product placement &amp; blending techniques</li>
+                                            <li>Shade matching guidance</li>
+                                            <li>Product &amp; tool recommendations</li>
+                                            <li>Q&amp;A throughout session</li>
+                                            <li>Curated beginner beauty kit included</li>
+                                        </ul>
+
+                                        <p><strong>Session Length:</strong> Approximately 2 Hours</p>
+                                        <p><strong>Investment:</strong> $250</p>
+
+                                        <h3>Please Arrive:</h3>
+                                        <ul>
+                                            <li>With a clean face if possible</li>
+                                            <li>On time for your scheduled session</li>
+                                            <li>Ready to learn and practice</li>
+                                        </ul>
+
+                                        <h3>Booking Policy:</h3>
+                                        <p>Full payment is required upfront to secure your lesson booking. Due to the personalized nature of this service, all payments are non-refundable and no extra guests are permitted unless approved beforehand.</p>
+
+                                        <a href="#bookMe" class="button" data-booking-service="One-on-One Private Beauty Lesson - Soft Glam">Book This Lesson</a>
+                                    </div>
                                 </div>                                                      
                             </article>
                 </div>

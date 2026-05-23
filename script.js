@@ -38,6 +38,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const serviceChoices = document.querySelectorAll('.service-choice');
+    const servicePanels = document.querySelectorAll('.service-panel');
+    serviceChoices.forEach((choice) => {
+        choice.addEventListener('click', () => {
+            const targetId = choice.dataset.servicePanel;
+
+            serviceChoices.forEach((button) => {
+                button.classList.toggle('is-selected', button === choice);
+            });
+
+            servicePanels.forEach((panel) => {
+                const isTarget = panel.id === targetId;
+                panel.hidden = !isTarget;
+                panel.classList.toggle('is-selected', isTarget);
+            });
+        });
+    });
+
+    const bookingServiceLinks = document.querySelectorAll('[data-booking-service]');
+    bookingServiceLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            const serviceSelect = document.getElementById('Service');
+            if (serviceSelect) {
+                serviceSelect.value = link.dataset.bookingService;
+            }
+        });
+    });
+
     const galleryLinks = document.querySelectorAll('#work a.image.fit');
     if (galleryLinks.length) {
         const lightbox = document.createElement('div');
