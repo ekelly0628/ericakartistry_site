@@ -40,19 +40,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const serviceChoices = document.querySelectorAll('.service-choice');
     const servicePanels = document.querySelectorAll('.service-panel');
+    const refreshServicesPanelHeight = () => {
+        const main = document.getElementById('main');
+        const servicesPanel = document.getElementById('MyServices');
+        if (!main || !servicesPanel) {
+            return;
+        }
+
+        window.requestAnimationFrame(() => {
+            const panelHeight = servicesPanel.offsetHeight;
+            main.style.minHeight = `${panelHeight}px`;
+            main.style.maxHeight = `${panelHeight}px`;
+
+            window.setTimeout(() => {
+                main.style.minHeight = '';
+                main.style.maxHeight = '';
+            }, 550);
+        });
+    };
+
     serviceChoices.forEach((choice) => {
         choice.addEventListener('click', () => {
             const targetId = choice.dataset.servicePanel;
+            let selectedPanel = null;
 
             serviceChoices.forEach((button) => {
                 button.classList.toggle('is-selected', button === choice);
+                button.setAttribute('aria-expanded', button === choice ? 'true' : 'false');
             });
 
             servicePanels.forEach((panel) => {
                 const isTarget = panel.id === targetId;
                 panel.hidden = !isTarget;
                 panel.classList.toggle('is-selected', isTarget);
+
+                if (isTarget) {
+                    selectedPanel = panel;
+                }
             });
+
+            refreshServicesPanelHeight();
+
+            if (selectedPanel && window.matchMedia('(max-width: 736px)').matches) {
+                window.setTimeout(() => {
+                    selectedPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
         });
     });
 
